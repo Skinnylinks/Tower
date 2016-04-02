@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TowerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="certData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="APN" Type="nvarchar" MaxLength="255" />
+    <Property Name="Certnum" Type="nvarchar" MaxLength="255" />
+    <Property Name="Subsequent" Type="float" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="IssuedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Certificates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="County" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fin_action" Type="nvarchar" MaxLength="255" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParcelNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tax_yr" Type="float" />
+    <Property Name="certnum" Type="float" />
+    <Property Name="Issued_Date" Type="smalldatetime" />
+    <Property Name="Face_Amount" Type="float" />
+    <Property Name="Interest_Rate" Type="float" />
+    <Property Name="Cert_Buyer" Type="nvarchar" MaxLength="255" />
+    <Property Name="Account_Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cert_Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Deed_Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date_Redeemed_Cert" Type="smalldatetime" />
+    <Property Name="TDA" Type="nvarchar" MaxLength="255" />
+    <Property Name="TDA_TAX_YR" Type="float" />
+    <Property Name="Application_Date" Type="smalldatetime" />
+    <Property Name="Applicating_Cert" Type="float" />
+    <Property Name="DeedAppNumber" Type="float" />
+    <Property Name="TDA_Deed Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Applicant" Type="nvarchar" MaxLength="255" />
+    <Property Name="Deed_Sale_Date" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sold_To_Applicant" Type="nvarchar" MaxLength="255" />
+    <Property Name="TDA_Date_Redeemed" Type="smalldatetime" />
+    <Property Name="Roll_Yr" Type="float" />
+    <Property Name="RedeemCount" Type="float" />
+    <Property Name="UnredeemCount" Type="float" />
+    <Property Name="MarketVal" Type="float" />
+    <Property Name="HomesteadType" Type="float" />
+    <Property Name="ExclusionCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="PricingGroup" Type="nvarchar" MaxLength="255" />
+    <Property Name="luTitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="age" Type="varchar" MaxLength="50" />
+    <Property Name="orig_action" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ColNames">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DDItems" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="contacts">
+    <Key>
+      <PropertyRef Name="CNTYID" />
+    </Key>
+    <Property Name="CNTYID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CID" Type="int" Nullable="false" />
+    <Property Name="ContactFirstName" Type="nvarchar" MaxLength="30" />
+    <Property Name="ContactLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="faxnumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="adddate" Type="smalldatetime" />
+    <Property Name="notes" Type="nvarchar(max)" />
+    <Property Name="cellphone" Type="varchar" MaxLength="20" />
+    <Property Name="ext" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactFirstName" Type="nvarchar" MaxLength="30" />
+    <Property Name="ContactLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="StateOrProvince" Type="nvarchar" MaxLength="20" />
+    <Property Name="PostalCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="faxnumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="dataUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="adddate" Type="smalldatetime" />
+    <Property Name="notes" Type="nvarchar(max)" />
+    <Property Name="clerkUrl" Type="nchar" MaxLength="100" />
+    <Property Name="countyUrl" Type="nchar" MaxLength="100" />
+    <Property Name="ext" Type="varchar" MaxLength="10" />
+    <Property Name="cellphone" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="datatemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="County" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fin_action" Type="nvarchar" MaxLength="255" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParcelNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tax_yr" Type="float" />
+    <Property Name="certnum" Type="float" />
+    <Property Name="Issued_Date" Type="datetime" />
+    <Property Name="Face_Amount" Type="float" />
+    <Property Name="Interest_Rate" Type="float" />
+    <Property Name="Cert_Buyer" Type="nvarchar" MaxLength="255" />
+    <Property Name="Account_Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cert_Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Deed_Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date_Redeemed_Cert" Type="datetime" />
+    <Property Name="TDA" Type="nvarchar" MaxLength="255" />
+    <Property Name="TDA_TAX_YR" Type="float" />
+    <Property Name="Application_Date" Type="datetime" />
+    <Property Name="Applicating_Cert" Type="float" />
+    <Property Name="DeedAppNumber" Type="float" />
+    <Property Name="TDA_Deed Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Applicant" Type="nvarchar" MaxLength="255" />
+    <Property Name="Deed_Sale_Date" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sold_To_Applicant" Type="nvarchar" MaxLength="255" />
+    <Property Name="TDA_Date_Redeemed" Type="datetime" />
+    <Property Name="Roll_Yr" Type="float" />
+    <Property Name="ASMNT_YR" Type="float" />
+    <Property Name="DOR_UC" Type="nvarchar" MaxLength="4" />
+    <Property Name="JV" Type="float" />
+    <Property Name="JV_HMSTD" Type="float" />
+    <Property Name="LND_SQFOOT" Type="float" />
+    <Property Name="DT_LAST_IN" Type="float" />
+    <Property Name="IMP_QUAL" Type="nvarchar" MaxLength="3" />
+    <Property Name="EFF_YR_BLT" Type="float" />
+    <Property Name="TOT_LVG_AR" Type="float" />
+    <Property Name="MKT_AR" Type="nvarchar" MaxLength="3" />
+    <Property Name="NBRHD_CD" Type="nvarchar" MaxLength="255" />
+    <Property Name="TWN" Type="nvarchar" MaxLength="3" />
+    <Property Name="RNG" Type="nvarchar" MaxLength="3" />
+    <Property Name="SEC" Type="nvarchar" MaxLength="3" />
+    <Property Name="CENSUS_BK" Type="nvarchar" MaxLength="16" />
+    <Property Name="PHY_ADDR1" Type="nvarchar" MaxLength="40" />
+    <Property Name="PHY_ZIPCD" Type="float" />
+    <Property Name="ALT_KEY" Type="nvarchar" MaxLength="26" />
+    <Property Name="JV_Range" Type="nvarchar" MaxLength="50" />
+    <Property Name="Homestead" Type="nvarchar" MaxLength="2" />
+    <Property Name="Year_Built" Type="nvarchar" MaxLength="50" />
+    <Property Name="Neighborhood_Census" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOR_Desc" Type="ntext" />
+    <Property Name="RedeemCount" Type="float" />
+    <Property Name="UnredeemCount" Type="float" />
+    <Property Name="MarketVal" Type="float" />
+    <Property Name="HomesteadType" Type="float" />
+    <Property Name="ExclusionCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="PricingGroup" Type="nvarchar" MaxLength="255" />
+    <Property Name="luTitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="age" Type="varchar" MaxLength="50" />
+    <Property Name="orig_action" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DORData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="County" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParcelNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="ASMNT_YR" Type="float" />
+    <Property Name="DOR_UC" Type="nvarchar" MaxLength="4" />
+    <Property Name="JV" Type="float" />
+    <Property Name="JV_HMSTD" Type="float" />
+    <Property Name="LND_SQFOOT" Type="float" />
+    <Property Name="DT_LAST_IN" Type="float" />
+    <Property Name="IMP_QUAL" Type="nvarchar" MaxLength="3" />
+    <Property Name="EFF_YR_BLT" Type="float" />
+    <Property Name="TOT_LVG_AR" Type="float" />
+    <Property Name="MKT_AR" Type="nvarchar" MaxLength="3" />
+    <Property Name="NBRHD_CD" Type="nvarchar" MaxLength="255" />
+    <Property Name="TWN" Type="nvarchar" MaxLength="3" />
+    <Property Name="RNG" Type="nvarchar" MaxLength="3" />
+    <Property Name="SEC" Type="nvarchar" MaxLength="3" />
+    <Property Name="CENSUS_BK" Type="nvarchar" MaxLength="16" />
+    <Property Name="PHY_ADDR1" Type="nvarchar" MaxLength="40" />
+    <Property Name="PHY_ZIPCD" Type="float" />
+    <Property Name="ALT_KEY" Type="nvarchar" MaxLength="26" />
+    <Property Name="JV_Range" Type="nvarchar" MaxLength="50" />
+    <Property Name="Homestead" Type="nvarchar" MaxLength="2" />
+    <Property Name="Year_Built" Type="nvarchar" MaxLength="50" />
+    <Property Name="Neighborhood_Census" Type="nvarchar" MaxLength="50" />
+    <Property Name="DOR_Desc" Type="nvarchar" MaxLength="512" />
+    <Property Name="JV_Order" Type="int" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ErrorID" />
+    </Key>
+    <Property Name="ErrorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ErrorUser" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorProcedure" Type="varchar" MaxLength="100" />
+    <Property Name="ErrorNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorDescription" Type="varchar" MaxLength="500" />
+    <Property Name="ErrorDateStamp" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JerseyData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sort_No" Type="float" />
+    <Property Name="APN" Type="nvarchar" MaxLength="255" />
+    <Property Name="Township" Type="nvarchar" MaxLength="255" />
+    <Property Name="County" Type="nvarchar" MaxLength="255" />
+    <Property Name="Block" Type="nvarchar" MaxLength="255" />
+    <Property Name="Lot" Type="nvarchar" MaxLength="255" />
+    <Property Name="Qualifier" Type="nvarchar" MaxLength="255" />
+    <Property Name="Additional_Lots" Type="nvarchar" MaxLength="255" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="255" />
+    <Property Name="HouseNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="DirL" Type="nvarchar" MaxLength="255" />
+    <Property Name="StreetName" Type="nvarchar" MaxLength="255" />
+    <Property Name="StreetSufx" Type="nvarchar" MaxLength="255" />
+    <Property Name="DirR" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="State" Type="nvarchar" MaxLength="255" />
+    <Property Name="ZIP" Type="nvarchar" MaxLength="255" />
+    <Property Name="FullLocation" Type="nvarchar" MaxLength="255" />
+    <Property Name="CityStateZip" Type="nvarchar" MaxLength="255" />
+    <Property Name="Owner" Type="nvarchar" MaxLength="255" />
+    <Property Name="AbsentOwner" Type="nvarchar" MaxLength="255" />
+    <Property Name="Class" Type="nvarchar" MaxLength="255" />
+    <Property Name="LandUse" Type="nvarchar" MaxLength="255" />
+    <Property Name="Zoning" Type="nvarchar" MaxLength="255" />
+    <Property Name="BldgDescr" Type="nvarchar" MaxLength="255" />
+    <Property Name="NoStories" Type="nvarchar" MaxLength="255" />
+    <Property Name="NoUnits" Type="nvarchar" MaxLength="255" />
+    <Property Name="YearBuilt" Type="nvarchar" MaxLength="255" />
+    <Property Name="LotWidth" Type="nvarchar" MaxLength="255" />
+    <Property Name="LotDepth" Type="nvarchar" MaxLength="255" />
+    <Property Name="LotSize" Type="nvarchar" MaxLength="255" />
+    <Property Name="Longitude" Type="nvarchar" MaxLength="255" />
+    <Property Name="Latitude" Type="nvarchar" MaxLength="255" />
+    <Property Name="SalePrice" Type="nvarchar" MaxLength="255" />
+    <Property Name="SaleDate" Type="nvarchar" MaxLength="255" />
+    <Property Name="PriorSalePrice" Type="nvarchar" MaxLength="255" />
+    <Property Name="PriorSaleDate" Type="nvarchar" MaxLength="255" />
+    <Property Name="AsmntYear" Type="nvarchar" MaxLength="255" />
+    <Property Name="LandValue" Type="nvarchar" MaxLength="255" />
+    <Property Name="ImpValue" Type="nvarchar" MaxLength="255" />
+    <Property Name="TotalValue" Type="nvarchar" MaxLength="255" />
+    <Property Name="TaxYear" Type="nvarchar" MaxLength="255" />
+    <Property Name="Taxes" Type="nvarchar" MaxLength="255" />
+    <Property Name="1stMtgAmt" Type="nvarchar" MaxLength="255" />
+    <Property Name="1stMtgRate" Type="nvarchar" MaxLength="255" />
+    <Property Name="1stMtgTerm" Type="nvarchar" MaxLength="255" />
+    <Property Name="1stMtgType" Type="nvarchar" MaxLength="255" />
+    <Property Name="2ndMtgAmt" Type="nvarchar" MaxLength="255" />
+    <Property Name="2ndMtgRate" Type="nvarchar" MaxLength="255" />
+    <Property Name="2ndMtgTerm" Type="nvarchar" MaxLength="255" />
+    <Property Name="2ndMtgType" Type="nvarchar" MaxLength="255" />
+    <Property Name="MailOwner" Type="nvarchar" MaxLength="255" />
+    <Property Name="MailCO" Type="nvarchar" MaxLength="255" />
+    <Property Name="MailAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="MailCityState" Type="nvarchar" MaxLength="255" />
+    <Property Name="MailZip" Type="nvarchar" MaxLength="255" />
+    <Property Name="OwnerPhone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Owner Name/Address:" Type="nvarchar" MaxLength="255" />
+    <Property Name="CertificateNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="SaleDateWeb" Type="datetime" />
+    <Property Name="LienHolder" Type="nvarchar" MaxLength="255" />
+    <Property Name="SaleAmount" Type="float" />
+    <Property Name="chg_typ1" Type="nvarchar" MaxLength="255" />
+    <Property Name="YearInSale" Type="nvarchar" MaxLength="255" />
+    <Property Name="Subsequent" Type="float" />
+    <Property Name="chg_typ2" Type="nvarchar" MaxLength="255" />
+    <Property Name="chg_typ3" Type="nvarchar" MaxLength="255" />
+    <Property Name="chg_typ4" Type="nvarchar" MaxLength="255" />
+    <Property Name="chg_typ5" Type="nvarchar" MaxLength="255" />
+    <Property Name="WEB" Type="nvarchar" MaxLength="255" />
+    <Property Name="estRdmDate" Type="datetime" />
+    <Property Name="age" Type="int" />
+    <Property Name="PaidYN" Type="bit" />
+    <Property Name="IssuedDate" Type="datetime" />
+    <Property Name="CertHist" Type="nvarchar" MaxLength="2048" />
+    <Property Name="AcctNum" Type="varchar" MaxLength="10" />
+    <Property Name="subMthYr" Type="int" />
+  </EntityType>
+  <EntityType Name="NJSubs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="APN" Type="nvarchar" MaxLength="255" />
+    <Property Name="Township" Type="nvarchar" MaxLength="255" />
+    <Property Name="Certnum" Type="nvarchar" MaxLength="255" />
+    <Property Name="IssuedDate" Type="datetime" />
+    <Property Name="Subsequent" Type="float" />
+    <Property Name="LastUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="percentCalc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="morder" Type="int" />
+    <Property Name="action" Type="nvarchar" MaxLength="255" />
+    <Property Name="pchoice" Type="nvarchar" MaxLength="255" />
+    <Property Name="pchoice2" Type="nvarchar" MaxLength="255" />
+    <Property Name="PricingGroup" Type="nvarchar" MaxLength="255" />
+    <Property Name="Face Value" Type="float" />
+    <Property Name="Month 6" Type="float" />
+    <Property Name="Month 12" Type="float" />
+    <Property Name="Month 23" Type="float" />
+    <Property Name="Month 30" Type="float" />
+    <Property Name="Month 36" Type="float" />
+    <Property Name="Today" Type="float" />
+    <Property Name="county" Type="varchar" MaxLength="50" />
+    <Property Name="nuser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ReportParams">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="County" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fin_action" Type="nvarchar" MaxLength="255" />
+    <Property Name="Issued_Date" Type="nvarchar" MaxLength="255" />
+    <Property Name="gparam1" Type="nvarchar" MaxLength="255" />
+    <Property Name="gparam2" Type="nvarchar" MaxLength="255" />
+    <Property Name="qwparam1" Type="nvarchar" MaxLength="255" />
+    <Property Name="qwparam2" Type="nvarchar" MaxLength="255" />
+    <Property Name="JV_Range" Type="nvarchar" MaxLength="255" />
+    <Property Name="gddparam1" Type="nvarchar" MaxLength="255" />
+    <Property Name="gddparam2" Type="nvarchar" MaxLength="255" />
+    <Property Name="nuser" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Function Name="spCounty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pgroup" Type="varchar" Mode="In" />
+    <Parameter Name="pwhere" Type="varchar" Mode="In" />
+    <Parameter Name="pswitch" Type="int" Mode="In" />
+    <Parameter Name="puser" Type="varchar" Mode="In" />
+    <Parameter Name="pselect" Type="varchar" Mode="In" />
+    <Parameter Name="pselect2" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spdataDownLoad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sstring" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spDrillDown" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="countyname" Type="varchar" Mode="In" />
+    <Parameter Name="buy" Type="varchar" Mode="In" />
+    <Parameter Name="PVRange" Type="varchar" Mode="In" />
+    <Parameter Name="p1group" Type="varchar" Mode="In" />
+    <Parameter Name="p2group" Type="varchar" Mode="In" />
+    <Parameter Name="p1where" Type="varchar" Mode="In" />
+    <Parameter Name="p2where" Type="varchar" Mode="In" />
+    <Parameter Name="p3group" Type="varchar" Mode="In" />
+    <Parameter Name="p4group" Type="varchar" Mode="In" />
+    <Parameter Name="pissdt" Type="varchar" Mode="In" />
+    <Parameter Name="puser" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spMktVal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pwhere" Type="varchar" Mode="In" />
+    <Parameter Name="puser" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spSubsequentUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="puser" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="TowerModelStoreContainer">
+    <EntitySet Name="certData" EntityType="Self.certData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Certificates" EntityType="Self.Certificates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ColNames" EntityType="Self.ColNames" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="datatemplate" EntityType="Self.datatemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DORData" EntityType="Self.DORData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JerseyData" EntityType="Self.JerseyData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NJSubs" EntityType="Self.NJSubs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="percentCalc" EntityType="Self.percentCalc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReportParams" EntityType="Self.ReportParams" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

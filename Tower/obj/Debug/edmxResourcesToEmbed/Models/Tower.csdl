@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TowerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="datatemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fin_action" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParcelNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Tax_yr" Type="Double" />
+    <Property Name="certnum" Type="Double" />
+    <Property Name="Issued_Date" Type="DateTime" Precision="3" />
+    <Property Name="Face_Amount" Type="Double" />
+    <Property Name="Interest_Rate" Type="Double" />
+    <Property Name="Cert_Buyer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Account_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cert_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Deed_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Redeemed_Cert" Type="DateTime" Precision="3" />
+    <Property Name="TDA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TDA_TAX_YR" Type="Double" />
+    <Property Name="Application_Date" Type="DateTime" Precision="3" />
+    <Property Name="Applicating_Cert" Type="Double" />
+    <Property Name="DeedAppNumber" Type="Double" />
+    <Property Name="TDA_Deed_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Applicant" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Deed_Sale_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sold_To_Applicant" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TDA_Date_Redeemed" Type="DateTime" Precision="3" />
+    <Property Name="Roll_Yr" Type="Double" />
+    <Property Name="ASMNT_YR" Type="Double" />
+    <Property Name="DOR_UC" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="JV" Type="Double" />
+    <Property Name="JV_HMSTD" Type="Double" />
+    <Property Name="LND_SQFOOT" Type="Double" />
+    <Property Name="DT_LAST_IN" Type="Double" />
+    <Property Name="IMP_QUAL" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EFF_YR_BLT" Type="Double" />
+    <Property Name="TOT_LVG_AR" Type="Double" />
+    <Property Name="MKT_AR" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="NBRHD_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TWN" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="RNG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SEC" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CENSUS_BK" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PHY_ADDR1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PHY_ZIPCD" Type="Double" />
+    <Property Name="ALT_KEY" Type="String" MaxLength="26" FixedLength="false" Unicode="true" />
+    <Property Name="JV_Range" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Homestead" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Year_Built" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Neighborhood_Census" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOR_Desc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RedeemCount" Type="Double" />
+    <Property Name="UnredeemCount" Type="Double" />
+    <Property Name="MarketVal" Type="Double" />
+    <Property Name="HomesteadType" Type="Double" />
+    <Property Name="ExclusionCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PricingGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="luTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="orig_action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="percentCalc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="morder" Type="Int32" />
+    <Property Name="action" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="pchoice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="pchoice2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PricingGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Face_Value" Type="Double" />
+    <Property Name="Month_6" Type="Double" />
+    <Property Name="Month_12" Type="Double" />
+    <Property Name="Month_23" Type="Double" />
+    <Property Name="Month_30" Type="Double" />
+    <Property Name="Month_36" Type="Double" />
+    <Property Name="Today" Type="Double" />
+    <Property Name="county" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nuser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Certificate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fin_action" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParcelNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Tax_yr" Type="Double" />
+    <Property Name="certnum" Type="Double" />
+    <Property Name="Issued_Date" Type="DateTime" Precision="0" />
+    <Property Name="Face_Amount" Type="Double" />
+    <Property Name="Interest_Rate" Type="Double" />
+    <Property Name="Cert_Buyer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Account_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cert_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Deed_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Date_Redeemed_Cert" Type="DateTime" Precision="0" />
+    <Property Name="TDA" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TDA_TAX_YR" Type="Double" />
+    <Property Name="Application_Date" Type="DateTime" Precision="0" />
+    <Property Name="Applicating_Cert" Type="Double" />
+    <Property Name="DeedAppNumber" Type="Double" />
+    <Property Name="TDA_Deed_Status" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Applicant" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Deed_Sale_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Sold_To_Applicant" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TDA_Date_Redeemed" Type="DateTime" Precision="0" />
+    <Property Name="Roll_Yr" Type="Double" />
+    <Property Name="RedeemCount" Type="Double" />
+    <Property Name="UnredeemCount" Type="Double" />
+    <Property Name="MarketVal" Type="Double" />
+    <Property Name="HomesteadType" Type="Double" />
+    <Property Name="ExclusionCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PricingGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="luTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="orig_action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DORData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParcelNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ASMNT_YR" Type="Double" />
+    <Property Name="DOR_UC" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="JV" Type="Double" />
+    <Property Name="JV_HMSTD" Type="Double" />
+    <Property Name="LND_SQFOOT" Type="Double" />
+    <Property Name="DT_LAST_IN" Type="Double" />
+    <Property Name="IMP_QUAL" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="EFF_YR_BLT" Type="Double" />
+    <Property Name="TOT_LVG_AR" Type="Double" />
+    <Property Name="MKT_AR" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="NBRHD_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TWN" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="RNG" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="SEC" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CENSUS_BK" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="PHY_ADDR1" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PHY_ZIPCD" Type="Double" />
+    <Property Name="ALT_KEY" Type="String" MaxLength="26" FixedLength="false" Unicode="true" />
+    <Property Name="JV_Range" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Homestead" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Year_Built" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Neighborhood_Census" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOR_Desc" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="JV_Order" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="TowerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="datatemplates" EntityType="Self.datatemplate" />
+    <EntitySet Name="percentCalcs" EntityType="Self.percentCalc" />
+    <EntitySet Name="Certificates" EntityType="Self.Certificate" />
+    <EntitySet Name="DORDatas" EntityType="Self.DORData" />
+    <FunctionImport Name="spdataDownLoad">
+      <Parameter Name="sstring" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ColNames" EntityType="TowerModel.ColName" />
+    <FunctionImport Name="spCounty">
+      <Parameter Name="pgroup" Mode="In" Type="String" />
+      <Parameter Name="pwhere" Mode="In" Type="String" />
+      <Parameter Name="pswitch" Mode="In" Type="Int32" />
+      <Parameter Name="puser" Mode="In" Type="String" />
+      <Parameter Name="pselect" Mode="In" Type="String" />
+      <Parameter Name="pselect2" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spMktVal">
+      <Parameter Name="pwhere" Mode="In" Type="String" />
+      <Parameter Name="puser" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spDrillDown">
+      <Parameter Name="countyname" Mode="In" Type="String" />
+      <Parameter Name="buy" Mode="In" Type="String" />
+      <Parameter Name="PVRange" Mode="In" Type="String" />
+      <Parameter Name="p1group" Mode="In" Type="String" />
+      <Parameter Name="p2group" Mode="In" Type="String" />
+      <Parameter Name="p1where" Mode="In" Type="String" />
+      <Parameter Name="p2where" Mode="In" Type="String" />
+      <Parameter Name="p3group" Mode="In" Type="String" />
+      <Parameter Name="p4group" Mode="In" Type="String" />
+      <Parameter Name="pissdt" Mode="In" Type="String" />
+      <Parameter Name="puser" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ReportParams" EntityType="TowerModel.ReportParam" />
+    <EntitySet Name="certDatas" EntityType="TowerModel.certData" />
+    <EntitySet Name="customers" EntityType="TowerModel.customer" />
+    <EntitySet Name="contacts" EntityType="TowerModel.contact" />
+    <EntitySet Name="JerseyDatas" EntityType="TowerModel.JerseyData" />
+    <EntitySet Name="ErrorLogs" EntityType="TowerModel.ErrorLog" />
+    <EntitySet Name="NJSubs" EntityType="TowerModel.NJSub" />
+    <FunctionImport Name="spSubsequentUpdate">
+      <Parameter Name="puser" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="ColName">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DDItems" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ReportParam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Fin_action" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Issued_Date" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="gparam1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="gparam2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="qwparam1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="qwparam2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="JV_Range" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="gddparam1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="gddparam2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nuser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="certData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="APN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Certnum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Subsequent" Type="Double" />
+    <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+    <Property Name="IssuedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactFirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ContactLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateOrProvince" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="faxnumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dataUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="adddate" Type="DateTime" Precision="0" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clerkUrl" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="countyUrl" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ext" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cellphone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="contact">
+    <Key>
+      <PropertyRef Name="CNTYID" />
+    </Key>
+    <Property Name="CNTYID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CID" Type="Int32" Nullable="false" />
+    <Property Name="ContactFirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ContactLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="faxnumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adddate" Type="DateTime" Precision="0" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cellphone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ext" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="JerseyData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sort_No" Type="Double" />
+    <Property Name="APN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Township" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Block" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Lot" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Qualifier" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Additional_Lots" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HouseNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DirL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StreetName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="StreetSufx" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DirR" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ZIP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FullLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CityStateZip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Owner" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AbsentOwner" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LandUse" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Zoning" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BldgDescr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NoStories" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NoUnits" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="YearBuilt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LotWidth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LotDepth" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LotSize" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Longitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SalePrice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SaleDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PriorSalePrice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PriorSaleDate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AsmntYear" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LandValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ImpValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TotalValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TaxYear" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Taxes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C1stMtgAmt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C1stMtgRate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C1stMtgTerm" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C1stMtgType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C2ndMtgAmt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C2ndMtgRate" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C2ndMtgTerm" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="C2ndMtgType" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MailOwner" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MailCO" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MailAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MailCityState" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MailZip" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerPhone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Owner_Name_Address_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CertificateNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SaleDateWeb" Type="DateTime" Precision="3" />
+    <Property Name="LienHolder" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SaleAmount" Type="Double" />
+    <Property Name="chg_typ1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="YearInSale" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Subsequent" Type="Double" />
+    <Property Name="chg_typ2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="chg_typ3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="chg_typ4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="chg_typ5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WEB" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="estRdmDate" Type="DateTime" Precision="3" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="PaidYN" Type="Boolean" />
+    <Property Name="IssuedDate" Type="DateTime" Precision="3" />
+    <Property Name="CertHist" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+    <Property Name="AcctNum" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="subMthYr" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="ErrorID" />
+    </Key>
+    <Property Name="ErrorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorUser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorProcedure" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorDateStamp" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="NJSub">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="APN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Township" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Certnum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IssuedDate" Type="DateTime" Precision="3" />
+    <Property Name="Subsequent" Type="Double" />
+    <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

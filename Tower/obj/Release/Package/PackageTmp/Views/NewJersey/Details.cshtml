@@ -1,0 +1,650 @@
+﻿@model Tower.Models.JerseyData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JerseyData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sort_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sort_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BlockLot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BlockLot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Township)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Township)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Block)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Block)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qualifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Additional_Lots)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Additional_Lots)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetSufx)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetSufx)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DirR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DirR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityStateZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityStateZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AbsentOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AbsentOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LandUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LandUse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zoning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zoning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BldgDescr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BldgDescr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoStories)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoStories)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoUnits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoUnits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearBuilt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearBuilt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotDepth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotDepth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriorSalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriorSalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PriorSaleDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PriorSaleDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AsmntYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AsmntYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LandValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LandValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImpValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImpValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taxes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C1stMtgAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C1stMtgAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C1stMtgRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C1stMtgRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C1stMtgTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C1stMtgTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C1stMtgType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C1stMtgType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2ndMtgAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2ndMtgAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2ndMtgRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2ndMtgRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2ndMtgTerm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2ndMtgTerm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.C2ndMtgType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C2ndMtgType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailOwner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailOwner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailCO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailCO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailCityState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailCityState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner_Name_Address_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner_Name_Address_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.All_certs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.All_certs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CertificateNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertificateNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleDateWeb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleDateWeb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LienHolder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LienHolder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chg_typ1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chg_typ1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearInSale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearInSale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subsequent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subsequent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chg_typ2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chg_typ2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chg_typ3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chg_typ3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chg_typ4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chg_typ4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chg_typ5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chg_typ5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WEB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WEB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estRdmDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estRdmDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaidYN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaidYN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IssuedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IssuedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

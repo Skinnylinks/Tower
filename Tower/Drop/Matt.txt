@@ -1,0 +1,6 @@
+Client ID
+ 97176857308-g3jfgmackp2m1b9eecgupnv90egb50f9.apps.googleusercontent.com 
+
+
+Secret
+ 9N4We8E2hjL9WlmiVJGiebko 

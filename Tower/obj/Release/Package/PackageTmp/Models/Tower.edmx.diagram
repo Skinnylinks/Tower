@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2388d2ed85ca4b2d9d0c1f15bc8e5595" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="TowerModel.datatemplate" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TowerModel.percentCalc" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TowerModel.Certificate" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TowerModel.DORData" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TowerModel.ColName" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="TowerModel.ReportParam" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.certData" Width="1.5" PointX="3.375" PointY="9.75" />
+        <EntityTypeShape EntityType="TowerModel.customer" Width="1.5" PointX="5.375" PointY="10.75" />
+        <EntityTypeShape EntityType="TowerModel.contact" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TowerModel.JerseyData" Width="1.5" PointX="9.375" PointY="5.75" />
+        <EntityTypeShape EntityType="TowerModel.ErrorLog" Width="1.5" PointX="11.375" PointY="4.75" />
+        <EntityTypeShape EntityType="TowerModel.NJSub" Width="1.5" PointX="11.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,58 @@
+﻿@model Tower.ViewModels.selectDropDown
+@*@model SLConsole.ViewModels.pCalcViewModel*@
+@helper ShowIfNotNull(string header)
+{
+    if (!string.IsNullOrEmpty(header))
+    {
+        <h4> Issue Date: @header</h4>
+    }
+}
+
+@{
+    ViewBag.Title = "Add Parameters";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+<h2>Add Parameters</h2>
+<p>
+    @Html.ActionLink("New Report", "index", "Reports")
+</p>
+<h4>@ViewBag.MyTitle</h4>
+
+@*<h4>County: @Html.Raw(Model.county)  --- Action: @Html.Raw(Model.paction) --- @Html.Raw(Model.col1) = @Html.Raw(Model.p1where) --- @Html.Raw(Model.col2) = @Html.Raw(Model.p2where)-Range:@Html.Raw(Model.jvalue)</h4>*@
+@*@ShowIfNotNull(Model.pissdt)*@
+@using (Html.BeginForm())   //"genstrats2", "percentCalcs"))
+{
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        @*@Html.HiddenFor(m => m.jvalue)
+        @Html.HiddenFor(m => m.county)
+        @Html.HiddenFor(m => m.col1)
+        @Html.HiddenFor(m => m.col2)
+        @Html.HiddenFor(m => m.paction)
+        @Html.HiddenFor(m => m.p1where)
+        @Html.HiddenFor(m => m.p2where)
+        @Html.HiddenFor(m => m.pissdt)*@
+
+        @Html.LabelFor(model => model.ddparam1, "Required Item", htmlAttributes: new { @class = "control-label" })  @Html.ValidationMessageFor(model => model.ddparam1, "", htmlAttributes: new { @class = "text-danger" })
+
+        @Html.DropDownListFor(model => model.ddparam1, Model.qparam1DD, String.Empty, htmlAttributes: new { @class = "form-control" })
+
+
+
+
+
+        @Html.LabelFor(model => model.ddparam2, "Optional Item", htmlAttributes: new { @class = "control-label" })
+
+        @Html.DropDownListFor(model => model.ddparam2, Model.qparam2DD, "Select Report Parameter", htmlAttributes: new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Run Report" class="btn btn-default" />
+        </div>
+    </div>
+
+
+}

@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        @if (HttpContext.Current.User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+
+            <li>@Html.ActionLink("County Contacts", "Index", "county")</li>
+    <li><a class="navbar-nav" href="~/Reports"><img src="~/Images/Florida_ico.png" /></a></li>
+    <li><a class="navbar-nav" href="~/NewJersey"><img src="~/Images/New Jersey_ico.png" /></a></li>
+           <li class="dropdown"><a class="navbar-nav" href="#">Tools</a>
+               <div class="dropdown-content">
+                   <a href="~/NewJersey/updateSubs">Update NJ Subs</a>
+                  
+               </div></li>
+
+        }
+    </ul>
+     @*<div class="dropdown-content">
+                <p>My Link</p>
+            </div>*@
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Tower.ViewModels.ErrorView>
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2>Error</h2>
+
+<table class="table">
+    <tr>
+
+        <th>
+            First Name
+        </th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.CID)
+                    </td>*@
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.message)
+
+                </td>
+            </tr>
+        }
+    }
+
+</table>
